@@ -1,0 +1,85 @@
+$primary-color: #F1A153;
+$accent-color: rgba(#F1A153, 0.1);
+$box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+@mixin heading-font-regular {
+  font-family: "Maven Pro", "Helvetica Neue", sans-serif;
+}
+*::-webkit-scrollbar {
+	width: 7px;
+	&:hover{
+		width: 8px !important;
+	}
+}
+*::-webkit-scrollbar:horizontal{
+	height: 4px;
+
+}
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba($primary-color,0.02);
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba($primary-color,0.7);
+	outline: 1px solid slategrey;
+}
+.material-container {
+	box-shadow: 0 1px 1px 0 rgba(60, 64, 67, .08), 0 1px 3px 1px rgba(60, 64, 67, .16);
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.card-header{
+	background-color: $accent-color !important;
+}
+mat-form-field{
+	 @include heading-font-regular;
+	 width: 100%;
+ }
+.loading{
+	z-index: 9;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+::ng-deep table {
+	border-collapse: collapse;
+	width: 100%;
+	overflow: auto;
+	margin: 0 0 2em;
+	thead {
+		border-bottom: 1px solid $primary-color !important;
+		tr{
+		th {
+			.mat-sort-header-container{
+		 .mat-sort-header-button{
+				padding: 0.35em 0 .35em;
+				font-weight: 400;
+				text-align: center;
+				color: $primary-color !important;
+				@include heading-font-regular;
+				font-size: 1.25em;
+			}
+		 }
+		}
+	 }
+	}
+	tbody {
+		border-bottom: 1px solid $primary-color;
+		tr {
+			border-bottom: 1px solid #ddd;
+
+			td {
+				padding: .75em 0;
+				&:first-child{
+					width:60px
+				}&:last-child{
+					width:75px
+				}
+			}
+		}
+	}
+}
+.table-img{
+	border-radius: 7px;
+	max-width: 45px
+}
