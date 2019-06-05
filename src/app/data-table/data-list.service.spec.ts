@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, async } from '@angular/core/testing';
 import { DataListService } from './data-list.service';
+import { HttpClient } from '@angular/common/http';
 
 describe('DataListService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -9,4 +9,5 @@ describe('DataListService', () => {
     const service: DataListService = TestBed.get(DataListService);
     expect(service).toBeTruthy();
   });
+
 });
